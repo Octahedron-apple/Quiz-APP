@@ -20,5 +20,7 @@ public class QuizActivity extends AppCompatActivity {
             v.setPadding(systemBars.left, systemBars.top, systemBars.right, systemBars.bottom);
             return insets;
         });
+
+        findViewById(R.id.btn_back_quiz).setOnClickListener(v -> finish());
     }
 }

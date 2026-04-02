@@ -6,28 +6,52 @@
     android:layout_height="match_parent"
     tools:context=".ViewScoresActivity">
 
+    <ImageView
+        android:id="@+id/iv_scores_illustration"
+        android:layout_width="120dp"
+        android:layout_height="120dp"
+        android:layout_marginTop="80dp"
+        android:src="@android:drawable/star_on"
+        android:alpha="0.2"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
     <TextView
         android:id="@+id/tv_scores_title"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Your Scores"
-        android:textSize="24sp"
+        android:layout_marginTop="16dp"
+        android:text="Your Achievements"
+        android:textColor="@color/primary"
+        android:textSize="28sp"
         android:textStyle="bold"
-        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.1" />
+        app:layout_constraintTop_toBottomOf="@id/iv_scores_illustration" />
 
     <TextView
         android:id="@+id/tv_no_scores"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="No scores available yet."
-        android:textSize="16sp"
-        app:layout_constraintBottom_toBottomOf="parent"
+        android:layout_marginTop="32dp"
+        android:text="No scores recorded yet."
+        android:textColor="@color/grey_dark"
+        android:textSize="18sp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@id/tv_scores_title" />
+
+    <Button
+        android:id="@+id/btn_back_scores"
+        style="@style/Widget.QuizAPP.Button"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="48dp"
+        android:text="Go Back"
+        android:backgroundTint="@color/primary"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/tv_no_scores" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

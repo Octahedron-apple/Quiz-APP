@@ -1,4 +1,5 @@
 package com.example.quizapp;
+import android.content.Intent;
 import android.os.Bundle;
 import androidx.activity.EdgeToEdge;
 import androidx.appcompat.app.AppCompatActivity;
@@ -19,6 +20,10 @@ public class MainActivity extends AppCompatActivity {
             return insets;
         });
 
+        findViewById(R.id.btn_start_quiz).setOnClickListener(v -> startActivity(new Intent(this, QuizActivity.class)));
+        findViewById(R.id.btn_make_quiz).setOnClickListener(v -> startActivity(new Intent(this, MakeQuizActivity.class)));
+        findViewById(R.id.btn_view_scores).setOnClickListener(v -> startActivity(new Intent(this, ViewScoresActivity.class)));
+        findViewById(R.id.btn_about).setOnClickListener(v -> startActivity(new Intent(this, AboutActivity.class)));
         findViewById(R.id.btn_exit).setOnClickListener(v -> finishAffinity());
     }
 }
